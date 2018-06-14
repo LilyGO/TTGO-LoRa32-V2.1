@@ -61,6 +61,7 @@ void loop() {
   
   display.drawString(0, 0, "Sending packet: ");
   display.drawString(90, 0, String(counter));
+  Serial.println(String(counter));
   display.display();
 
   // send packet
