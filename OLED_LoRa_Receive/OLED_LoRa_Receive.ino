@@ -8,7 +8,7 @@
 #define MISO    19   // GPIO19 -- SX1278's MISO
 #define MOSI    27   // GPIO27 -- SX1278's MOSI
 #define SS      18   // GPIO18 -- SX1278's CS
-#define RST     14   // GPIO14 -- SX1278's RESET
+#define RST     12   // GPIO14 -- SX1278's RESET
 #define DI0     26   // GPIO26 -- SX1278's IRQ(Interrupt Request)
 #define BAND    868E6
 
@@ -18,15 +18,15 @@ String packSize = "--";
 String packet ;
 
 
-
 void loraData(){
   display.clear();
   display.setTextAlignment(TEXT_ALIGN_LEFT);
   display.setFont(ArialMT_Plain_10);
   display.drawString(0 , 15 , "Received "+ packSize + " bytes");
   display.drawStringMaxWidth(0 , 26 , 128, packet);
-  display.drawString(0, 0, rssi);  
+  display.drawString(0, 0, rssi); 
   display.display();
+  Serial.println(rssi);
 }
 
 void cbk(int packetSize) {
@@ -43,7 +43,7 @@ void setup() {
   delay(50); 
   digitalWrite(16, HIGH); // while OLED is running, must set GPIO16 in high、
   
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial);
   Serial.println();
   Serial.println("LoRa Receiver Callback");
@@ -59,7 +59,7 @@ void setup() {
   display.init();
   display.flipScreenVertically();  
   display.setFont(ArialMT_Plain_10);
-  
+   
   delay(1500);
 }
 
