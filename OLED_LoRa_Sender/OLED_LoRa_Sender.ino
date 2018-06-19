@@ -4,15 +4,6 @@
 #include "SSD1306.h" 
 #include "images.h"
 
-<<<<<<< HEAD
-#define SCK     5    // GPIO5  -- SX1278's SCK
-#define MISO    19   // GPIO19 -- SX1278's MISnO
-#define MOSI    27   // GPIO27 -- SX1278's MOSI
-#define SS      18   // GPIO18 -- SX1278's CS
-#define RST     12   // GPIO14 -- SX1278's RESET
-#define DI0     26   // GPIO26 -- SX1278's IRQ(Interrupt Request)
-#define BAND  868E6
-=======
 #define SCK     5    // GPIO5  -- SCK
 #define MISO    19   // GPIO19 -- MISO
 #define MOSI    27   // GPIO27 -- MOSI
@@ -20,7 +11,7 @@
 #define RST     12   // GPIO14 -- RESET (If Lora does not work, replace it with GPIO14)
 #define DI0     26   // GPIO26 -- IRQ(Interrupt Request)
 #define BAND    868E6
->>>>>>> 915cad647b5ab1b7d4951840eca2d3f71b424df1
+
 
 unsigned int counter = 0;
 
