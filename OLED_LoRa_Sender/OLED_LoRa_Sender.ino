@@ -10,7 +10,7 @@
 #define SS      18   // GPIO18 -- CS
 #define RST     12   // GPIO14 -- RESET (If Lora does not work, replace it with GPIO14)
 #define DI0     26   // GPIO26 -- IRQ(Interrupt Request)
-#define BAND    868E6
+#define BAND    915E6
 
 
 unsigned int counter = 0;
