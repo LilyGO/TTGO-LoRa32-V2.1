@@ -8,7 +8,7 @@
 #define MISO    19   // GPIO19 -- MISO
 #define MOSI    27   // GPIO27 -- MOSI
 #define SS      18   // GPIO18 -- CS
-#define RST     12   // GPIO14 -- RESET (If Lora does not work, replace it with GPIO14)
+#define RST     23   // GPIO14 -- RESET (If Lora does not work, replace it with GPIO14)
 #define DI0     26   // GPIO26 -- IRQ(Interrupt Request)
 #define BAND    868E6
 
